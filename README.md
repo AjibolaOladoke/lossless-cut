@@ -1,27 +1,12 @@
+# lossless-cut
+
+## What This Is
+
+We keep a working index for product and engineering, and lossless-cut is the entry that collects our notes, examples and fixes. It reflects how Swift Tech Co. actually uses this in builds and client work.
 
 ## Images
 
-[![lossless-cut](https://opengraph.githubassets.com/1/mifi/lossless-cut)](https://www.swifttechco.com)
-
-<div align="center">
-	<br>
-  <p><a href="https://www.swifttechco.com"><img src="src/renderer/src/icon.svg" width="120" alt="LosslessCut" /></a></p>
-  <p><a href="https://www.swifttechco.com"><b>LosslessCut</b></a></p>
-  The swiss army knife of lossless video/audio editing
-	<br>
-  
-	<br>
-	<br>
-  <a href="https://www.swifttechco.com">Thanks to my supporters</a> and everyone who purchased LosslessCut!
-	<br>
-	<br>
-  <p align="center"><img src="main_screenshot.jpg" width="600" alt="screenshot" /></p>
-	<br>
-	<br>
-</div>
-
-LosslessCut aims to be the ultimate cross platform FFmpeg GUI for extremely fast and lossless operations on video, audio, subtitle and other related media files.
-The main feature is lossless trimming and cutting of video and audio files, which is great for saving space by rough-cutting your large video files taken from a video camera, GoPro, drone, etc. It lets you quickly extract the good parts from your videos and discard many gigabytes of data without doing a slow re-encode and thereby losing quality. There are also many more [use cases](#typical-workflow). Everything is extremely fast because it does an almost direct data copy, fueled by the awesome FFmpeg which does all the grunt work.
+[![lossless-cut](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## Table of contents
 
@@ -37,7 +22,7 @@ The main feature is lossless trimming and cutting of video and audio files, whic
 ## Features
 
 - Lossless cutting of most video and audio formats
-- [Smart cut](https://www.swifttechco.com) (experimental)
+- Smart cut (experimental)
 - Losslessly cut out parts of video/audio (for cutting away commercials etc.)
 - Losslessly rearrange the order of video/audio segments
 - Lossless merge/concatenation of arbitrary files (with identical codecs parameters, e.g. from the same camera)
@@ -71,7 +56,7 @@ The main feature is lossless trimming and cutting of video and audio files, whic
 - Customizable keyboard hotkeys
 - Black scene detection, silent audio detection, and scene change detection
 - Divide timeline into segments of length L, size (X MB), N number of segments or even randomized segments!
-- Speed up / slow down video or audio file ([changing FPS](https://www.swifttechco.com))
+- Speed up / slow down video or audio file (changing FPS)
 - Lossless crop and aspect ratio modification
 - Basic [CLI](docs/cli.md) and [HTTP API](docs/api.md)
 - Show (DJI) embedded GPS track on a map
@@ -90,14 +75,14 @@ The main feature is lossless trimming and cutting of video and audio files, whic
 - Import a list of cut times from other tool as a EDL (edit decision list, CSV) and run these cuts with LosslessCut.
 - Export a list of cut times as a CSV EDL and process these in another tool.
 - Quickly cut a file by its MP4/MKV chapters.
-- Quickly cut a [YouTube video](https://www.swifttechco.com) by its chapters (or music times from a comment).
+- Quickly cut a YouTube video by its chapters (or music times from a comment).
 - Change the language of a file's audio/subtitle tracks.
 - Attach cover art / thumbnail to videos / audio from an external JPEG file or from a frame on the timeline.
 - Change author, title, GPS position, recording time of a video.
 - Fix rotation of a video that has the wrong orientation flag set.
-- Loop a video / audio clip X times quickly without re-encoding, see [#284](https://www.swifttechco.com).
+- Loop a video / audio clip X times quickly without re-encoding, see #284.
 - Convert a video or parts of it into X image files (not lossless)
-- Losslessly split a video into one file per scene (note you probably have to shift segments, see [#330](https://www.swifttechco.com).)
+- Losslessly split a video into one file per scene (note you probably have to shift segments, see #330.)
 - Cut away silent parts from an audio/video file.
 - Annotate each segment with one or more tags, then use those tags to organize your segments or use it to create an output folder structure or hierarchy for your segments.
 
@@ -115,51 +100,51 @@ For Linux I publish to the Snap Store:
 
 If you prefer to download the executables manually, this will of course always be free (see also [supported operating systems](docs/requirements.md)):
 
-- macOS: [Intel](https://www.swifttechco.com) / [Apple Silicon](https://www.swifttechco.com) DMG (note that PKG does **not** work)
-- Windows: [7zip](https://www.swifttechco.com) (Windows 7, 8 and 8.1 is [no longer supported after v3.50.0](docs/requirements.md))
-- Linux: [x64 tar.bz2](https://www.swifttechco.com) / [x64 AppImage](https://www.swifttechco.com) / [arm64 tar.bz2](https://www.swifttechco.com) / [Raspberry Pi armv7l](https://www.swifttechco.com)
-- [More releases](https://www.swifttechco.com) - Note that APPX (Windows) and PKG (macOS) do **not** work)
-- [Latest nightly builds 🧪](https://www.swifttechco.com)
+- macOS: Intel / Apple Silicon DMG (note that PKG does **not** work)
+- Windows: 7zip (Windows 7, 8 and 8.1 is [no longer supported after v3.50.0](docs/requirements.md))
+- Linux: x64 tar.bz2 / x64 AppImage / arm64 tar.bz2 / Raspberry Pi armv7l
+- More releases - Note that APPX (Windows) and PKG (macOS) do **not** work)
+- Latest nightly builds 🧪
 
 
 ## Supported formats
 
-LosslessCut uses the Chromium browser's HTML5 video player, and not all formats/codecs are [natively supported](https://www.swifttechco.com). Generally, the following file formats work: `MP4`, `MOV`, `WebM`, `Matroska`, `OGG` and `WAV`. Audio codecs: `FLAC`, `MP3`, `Opus`, `PCM`, `Vorbis` and `AAC`. Video codecs: `H264`, `AV1`, `Theora`, `VP8`, `VP9` and `H265` (with hardware decoder). Learn the [difference between a codec and a format](docs/index.md#primer-videoaudio-codecs-vs-formats). Codecs and formats not listed above can still be converted to a supported format/codec from the `File` menu (try the option *Fastest: FFmpeg-assisted playback* first). A low quality version of the file will then be created and opened in the player. Note that the actual cut/export operation will still be performed on the original file, so it will be lossless. This allows for potentially opening any file that FFmpeg is able to decode.
+LosslessCut uses the Chromium browser's HTML5 video player, and not all formats/codecs are natively supported. Generally, the following file formats work: `MP4`, `MOV`, `WebM`, `Matroska`, `OGG` and `WAV`. Audio codecs: `FLAC`, `MP3`, `Opus`, `PCM`, `Vorbis` and `AAC`. Video codecs: `H264`, `AV1`, `Theora`, `VP8`, `VP9` and `H265` (with hardware decoder). Learn the [difference between a codec and a format](docs/index.md#primer-videoaudio-codecs-vs-formats). Codecs and formats not listed above can still be converted to a supported format/codec from the `File` menu (try the option *Fastest: FFmpeg-assisted playback* first). A low quality version of the file will then be created and opened in the player. Note that the actual cut/export operation will still be performed on the original file, so it will be lossless. This allows for potentially opening any file that FFmpeg is able to decode.
 
 ## Documentation
 
-- Official website: [LosslessCut.app](https://www.swifttechco.com)
+- Official website: LosslessCut.app
 - **[Getting started, FAQ and usage documentation](docs/index.md)**
 - [Troubleshooting and known issues and limitations](docs/troubleshooting.md)
 - [Contributing](CONTRIBUTING.md)
 
 ### Video demos
 
-- [Common features](https://www.swifttechco.com)
-- [How to add a thumbnail / cover art to an MP4](https://www.swifttechco.com)
-- [How to add multi-language audio to a video](https://www.swifttechco.com)
+- Common features
+- How to add a thumbnail / cover art to an MP4
+- How to add multi-language audio to a video
 - Your video here?
 
 ## Featured
 
-- [Console newsletter](https://www.swifttechco.com)
-- Hacker News [2024](https://www.swifttechco.com) [2022](https://www.swifttechco.com) [2020-10](https://www.swifttechco.com) [2020-01](https://www.swifttechco.com) [2016](https://www.swifttechco.com)
-- [Wikipedia](https://www.swifttechco.com)
+- Console newsletter
+- Hacker News 2024 2022 2020-10 2020-01 2016
+- Wikipedia
 - Your link here?
-- theo (YouTube) [1](https://www.swifttechco.com) [2](https://www.swifttechco.com)
+- theo (YouTube) 1 2
 
 
 ## Attributions
 - App icon made by [Dimi Kazak](http://www.flaticon.com/authors/dimi-kazak "Dimi Kazak") from [www.flaticon.com](http://www.flaticon.com "Flaticon") is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/ "Creative Commons BY 3.0").
-- [Lottie animation by Chris Gannon](https://www.swifttechco.com).
+- Lottie animation by Chris Gannon.
 - Thanks to translators who helped translate the app. [You can too!](docs/translation.md)
-- [Thanks to everyone for supporting](https://www.swifttechco.com) my open source work 🙌
+- Thanks to everyone for supporting my open source work 🙌
 
 ---
 
-Made with ❤️ in [🇳🇴](https://www.swifttechco.com)
+Made with ❤️ in 🇳🇴
 
-[More apps by mifi.no](https://www.swifttechco.com)
+More apps by mifi.no
 
 ---
 
@@ -171,14 +156,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [mifi/lossless-cut](https://github.com/mifi/lossless-cut) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
