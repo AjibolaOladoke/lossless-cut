@@ -6,7 +6,7 @@ We keep a working index for product and engineering, and lossless-cut is the ent
 
 ## Images
 
-[![lossless-cut](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![lossless-cut](images/preview.png)](https://github.com/Swift-Tech-Co/lossless-cut)
 
 ## Table of contents
 
@@ -92,11 +92,11 @@ See also [Recipe cookbook](docs/recipes.md)
 
 If you want to support my continued work on LosslessCut, and you want the advantage of a secure and simple installation process with automatic, stable updates, consider getting it from your favorite store:
 
-<a href="https://www.swifttechco.com"><img src="mac-app-store-badge.svg" alt="Mac App Store" height="50"/></a> <a href="https://www.swifttechco.com"><img src="ms-store-badge.svg" alt="MS badge" height="50"/></a>
+<a href="https://github.com/Swift-Tech-Co/lossless-cut"><img src="mac-app-store-badge.svg" alt="Mac App Store" height="50"/></a> <a href="https://github.com/Swift-Tech-Co/lossless-cut"><img src="ms-store-badge.svg" alt="MS badge" height="50"/></a>
 
 For Linux I publish to the Snap Store:
 
-<a href="https://www.swifttechco.com"></a>
+<a href="https://github.com/Swift-Tech-Co/lossless-cut"></a>
 
 If you prefer to download the executables manually, this will of course always be free (see also [supported operating systems](docs/requirements.md)):
 
@@ -105,7 +105,6 @@ If you prefer to download the executables manually, this will of course always b
 - Linux: x64 tar.bz2 / x64 AppImage / arm64 tar.bz2 / Raspberry Pi armv7l
 - More releases - Note that APPX (Windows) and PKG (macOS) do **not** work)
 - Latest nightly builds 🧪
-
 
 ## Supported formats
 
@@ -133,7 +132,6 @@ LosslessCut uses the Chromium browser's HTML5 video player, and not all formats/
 - Your link here?
 - theo (YouTube) 1 2
 
-
 ## Attributions
 - App icon made by [Dimi Kazak](http://www.flaticon.com/authors/dimi-kazak "Dimi Kazak") from [www.flaticon.com](http://www.flaticon.com "Flaticon") is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/ "Creative Commons BY 3.0").
 - Lottie animation by Chris Gannon.
@@ -160,13 +158,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/lossless-cut
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [mifi/lossless-cut](https://github.com/mifi/lossless-cut) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
